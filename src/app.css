@@ -1,0 +1,30 @@
+@import 'tailwindcss';
+@import '@skeletonlabs/skeleton';
+@import '@skeletonlabs/skeleton/optional/presets';
+@import '@skeletonlabs/skeleton/themes/cerberus';
+
+@source '../node_modules/@skeletonlabs/skeleton-svelte/dist';
+@plugin '@tailwindcss/typography';
+
+@custom-variant dark (&:where([data-mode="dark"], [data-mode="dark"] *));
+
+@font-face {
+	font-family: 'JetBrains Mono';
+	font-style: normal;
+	font-weight: 200 700;
+	font-display: swap;
+	src: url('/fonts/JetBrains_Mono/static/JetBrainsMono-Regular.ttf') format('truetype');
+}
+
+@font-face {
+	font-family: 'Nunito';
+	font-style: normal;
+	font-weight: 200 700;
+	font-display: swap;
+	src: url('/fonts/Nunito/static/Nunito-Regular.ttf') format('truetype');
+}
+
+@theme {
+	--font-jetbrains: 'JetBrains Mono', monospace;
+	--font-nunito: 'Nunito', sans-serif;
+}
