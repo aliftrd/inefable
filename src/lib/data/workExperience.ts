@@ -21,7 +21,7 @@ export const workExperiences: WorkExperience[] = [
 		name: 'Freelance',
 		role: 'Full Stack Developer',
 		time_start: '2021-02-09',
-		time_end: '2023-02-31',
+		time_end: '2023-02-28',
 		jobs: [
 			'Developed a RESTful API that enhanced third-party integrations by 30%, improving overall system efficiency.',
 			'Developed WhatsApp API gateway using WWebJS and ExpressJS to increase third-party integration.',
