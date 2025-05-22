@@ -51,7 +51,7 @@ jobs:
         with:
           apiToken: ${{ secrets.CF_API_TOKEN }}
           accountId: ${{ secrets.CF_USER_ID }}
-          command: pages deploy .svelte-kit/cloudflare --project-name=portfolio-svelte
+          command: pages deploy .svelte-kit/cloudflare --project-name=inefable
         env:
           NODE_VERSION: 22
           PNPM_VERSION: 10
