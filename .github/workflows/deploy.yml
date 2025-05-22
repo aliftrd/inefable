@@ -1,4 +1,4 @@
-name: Deploy To Private Server
+name: Deploy to Cloudflare Pages
 
 on:
   push:
@@ -6,19 +6,35 @@ on:
       - main
 
 jobs:
-  build:
-    name: Build and deploy
+  deploy:
     runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      deployments: write
     steps:
-      - name: Build and deploy
-        uses: appleboy/ssh-action@v1.0.3
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
         with:
-          host: ${{ secrets.SSH_HOST }}
-          username: ${{ secrets.SSH_USERNAME }}
-          key: ${{ secrets.SSH_PRIVATE_KEY }}
-          script: |
-            cd ~/Dev/inefable
-            git pull
-            yarn install
-            yarn build
-            pm2 start ecosystem.config.cjs
+          node-version: 22
+          cache: 'yarn'
+
+      - name: Install Yarn
+        run: npm install -g yarn
+
+      - name: Install dependencies
+        run: yarn install --frozen-lockfile
+
+      - name: Build the site
+        run: yarn build
+
+      - name: Publish
+        uses: cloudflare/wrangler-action@v3
+        with:
+          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          command: pages deploy .svelte-kit/cloudflare --project-name=inefable
+        env:
+          NODE_VERSION: 22
