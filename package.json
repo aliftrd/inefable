@@ -13,13 +13,13 @@
 	"scripts": {
 		"dev": "vite dev",
 		"build": "vite build",
-		"preview": "yarn run build && wrangler pages dev",
+		"preview": "npm run build && wrangler pages dev",
 		"prepare": "husky",
 		"check": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json",
 		"check:watch": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json --watch",
 		"format": "prettier --write .",
 		"lint": "prettier --check . && eslint .",
-		"deploy": "yarn build && wrangler pages deploy"
+		"deploy": "npm run build && wrangler pages deploy"
 	},
 	"devDependencies": {
 		"@eslint/compat": "^1.2.5",
@@ -55,8 +55,7 @@
 		"*.{js,ts,svelte}": [
 			"prettier --check",
 			"eslint",
-			"yarn run check"
+			"npm run check"
 		]
-	},
-	"packageManager": "yarn@1.22.22+sha512.a6b2f7906b721bba3d67d4aff083df04dad64c399707841b7acf00f6b133b7ac24255f2652fa22ae3534329dc6180534e98d17432037ff6fd140556e2bb3137e"
+	}
 }

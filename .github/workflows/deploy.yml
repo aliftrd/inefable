@@ -19,16 +19,9 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: 22
-          cache: 'yarn'
-
-      - name: Install Yarn
-        run: npm install -g yarn
 
       - name: Install dependencies
-        run: yarn install --frozen-lockfile
-
-      - name: Build the site
-        run: yarn build
+        run: npm ci 
 
       - name: Publish
         uses: cloudflare/wrangler-action@v3
