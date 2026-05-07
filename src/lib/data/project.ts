@@ -123,7 +123,7 @@ export const projects: Project[] = [
 		name: 'Sanku',
 		thumbnail: Sanku,
 		description:
-			'An application specifically designed to help you build good habits in the midst of high mobility to remain consistent in fulfilling your daily worship needs.',
+			'Sanku is a personal finance app designed to help you understand, manage and improve your financial situation comprehensively.',
 		repository: 'https://play.google.com/store/apps/details?id=id.my.aliftrd.sanku&hl=en',
 		stacks: [
 			'Flutter',
