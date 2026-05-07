@@ -18,10 +18,10 @@ export const educations: Education[] = [
 		id: 2,
 		institution: 'Politeknik Negeri Jember',
 		major: 'Information Technology',
-		gpa: 3.86,
+		gpa: 3.87,
 		location: 'Jember',
 		startDate: '2021',
-		endDate: null,
+		endDate: '2025',
 		logo: PolijeLogo,
 		achievements: []
 	}

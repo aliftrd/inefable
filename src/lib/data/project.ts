@@ -1,9 +1,12 @@
 import type { Project } from '$lib/types/Project';
-import SynteticWA from '$lib/assets/project/synteticwa.png?enhanced';
-import PEDO from '$lib/assets/project/pedo.png?enhanced';
-import Lexilearn from '$lib/assets/project/lexilearn.png?enhanced';
-import Raisehand from '$lib/assets/project/raisehand.png?enhanced';
-import Dzikra from '$lib/assets/project/dzikra.png?enhanced';
+import SynteticWA from '$lib/assets/project/synteticwa.webp?enhanced';
+import PEDO from '$lib/assets/project/pedo.webp?enhanced';
+import Lexilearn from '$lib/assets/project/lexilearn.webp?enhanced';
+import Raisehand from '$lib/assets/project/raisehand.webp?enhanced';
+import Dzikra from '$lib/assets/project/dzikra.webp?enhanced';
+import SosioApps from '$lib/assets/project/sosio-apps.webp?enhanced';
+import Gadaiku from '$lib/assets/project/gadaiku.webp?enhanced';
+import Sanku from '$lib/assets/project/sanku.webp?enhanced';
 
 export const projects: Project[] = [
 	{
@@ -63,7 +66,7 @@ export const projects: Project[] = [
 		description:
 			'An internal employee attendance app by Inovasi360 and Bigio. It simplifies digital attendance with features like location-based check-in/out, automatic notifications, and easy attendance tracking—helping companies manage employee attendance more accurately and efficiently.',
 		repository: 'https://play.google.com/store/apps/details?id=id.inovasi360.attendapp&hl=en&pli=1',
-		stacks: ['Flutter', 'Dart'],
+		stacks: ['Flutter', 'Dart', 'GetX'],
 		contributions: [
 			'Creating authentication system using firebase',
 			'Implementing FCM notification',
@@ -78,11 +81,70 @@ export const projects: Project[] = [
 		description:
 			'An application specifically designed to help you build good habits in the midst of high mobility to remain consistent in fulfilling your daily worship needs.',
 		repository: 'https://play.google.com/store/apps/details?id=id.bigio.dzikra&hl=en',
-		stacks: ['Flutter', 'Dart'],
+		stacks: ['Flutter', 'Dart', 'GetX'],
 		contributions: [
 			'Implementing deeplink and flutter dynamic link',
 			'Add page to infaq after successful payment',
 			'Improve error tracking in the application to analyze data in the future'
+		]
+	},
+	{
+		id: 8,
+		name: 'SOSIO',
+		thumbnail: SosioApps,
+		description:
+			'SOSIO enables you to create detailed stakeholder profiles and provides relevant recommendations based on accurate analysis. Manage your business operations more efficiently and effectively with SOSIO. Discover innovative new ways to manage stakeholders and make changes that are crucial to your business’s success.',
+		repository: 'https://play.google.com/store/apps/details?id=com.apps.sosio',
+		stacks: ['Flutter', 'Dart', 'Provider'],
+		contributions: [
+			'Fixed critical bugs and improved the overall app stability',
+			'Added a new communication feature to allow users to message each other in-site',
+			'Implemented error tracking to analyze data in the future'
+		]
+	},
+	{
+		id: 9,
+		name: 'Gadaiku',
+		thumbnail: Gadaiku,
+		description:
+			'Quick and easy pawnbroking! We accept gold and electronics as collateral, offering low interest rates, high valuations and guaranteed security of your items.',
+		repository: null,
+		stacks: ['Flutter', 'Dart', 'Firebase', 'Remote Config', 'Bloc'],
+		contributions: [
+			'Implemented multiple flavors to support different environments and branding requirements',
+			'Integrated RESTful APIs for data consumption throughout the app',
+			'Added KTP OCR functionality for identity verification',
+			'Configured Remote Config for dynamic parameter management',
+			'Improved error tracking to analyze data in the future'
+		]
+	},
+	{
+		id: 10,
+		name: 'Sanku',
+		thumbnail: Sanku,
+		description:
+			'An application specifically designed to help you build good habits in the midst of high mobility to remain consistent in fulfilling your daily worship needs.',
+		repository: 'https://play.google.com/store/apps/details?id=id.my.aliftrd.sanku&hl=en',
+		stacks: [
+			'Flutter',
+			'Dart',
+			'Firebase',
+			'Remote Config',
+			'Bloc',
+			'Laravel',
+			'PHP',
+			'PostgreSQL',
+			'RevenueCat'
+		],
+		contributions: [
+			'Added backend service integration for sync and data management',
+			'Implemented user streak tracking features',
+			'Linked Firebase Auth to backend service for secure authentication',
+			'Initialized mobile app project setup from scratch',
+			'Configured Remote Config for dynamic parameter management',
+			'Integrated Crashlytics for real-time error and crash reporting',
+			'Supported multiple app flavors to handle different environments and branding requirements',
+			'Implemented in-app purchase feature to allow users to purchase premium functionalities within the app'
 		]
 	}
 ];

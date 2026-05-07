@@ -1,6 +1,7 @@
 import type { WorkExperience } from '$lib/types/WorkExperience';
 import RezayoLogo from '$lib/assets/company/rezayo.png?enhanced';
 import BigioLogo from '$lib/assets/company/bigio.jpeg?enhanced';
+import SomaLogo from '$lib/assets/company/soma.jpg?enhanced';
 
 export const workExperiences: WorkExperience[] = [
 	{
@@ -43,6 +44,21 @@ export const workExperiences: WorkExperience[] = [
 			'Participated in code reviews and provided valuable feedback, leading to a 30% reduction in bugs and enhanced code quality.',
 			'Improved team collaboration and knowledge sharing by introducing collaborative tools and conducting regular knowledge-sharing sessions, resulting in a 30% decrease in siloed work.',
 			'Developed and launched a new mobile app, increasing user engagement by 30% within the first three months.'
+		]
+	},
+	{
+		id: 4,
+		logo: SomaLogo,
+		name: 'PT. Solusi Makmur Sinergi Optima',
+		role: 'Mobile Developer - Contract',
+		time_start: '2025-08-19',
+		time_end: '2026-02-18',
+		jobs: [
+			'Actively contributed to team knowledge sharing initiatives, resulting in an upskilled and more efficient development team.',
+			'Refactored legacy code, resulting in a 30% reduction in code complexity and increased feature delivery speed by 25%.',
+			"Resolved critical bugs in a timely manner, reducing the app's crash rate by 80% and enhancing the user experience significantly.",
+			'Collaborated with cross-functional teams to deliver feature updates ahead of schedule.',
+			'Created an OCR model for ID card data extraction using Roboflow, YOLOv11, and PaddleOCR.'
 		]
 	}
 ];

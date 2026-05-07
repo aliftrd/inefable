@@ -16,9 +16,10 @@
 		<div class="flex flex-col items-start gap-8 sm:flex-row sm:items-center">
 			<a
 				class="group relative inline-flex cursor-pointer items-center justify-center overflow-hidden rounded-md bg-neutral-950 px-6 py-2 font-medium text-neutral-200 dark:bg-neutral-200 dark:text-neutral-950"
-				href={about.downloadCV}
+				href={`https://wa.me/${about.whatsapp}`}
+				target="_blank"
 			>
-				Download CV
+				Get in touch
 				<div
 					class="w-0 translate-x-[100%] pl-0 opacity-0 transition-all duration-200 group-hover:w-5 group-hover:translate-x-0 group-hover:pl-1 group-hover:opacity-100"
 				>
@@ -36,14 +37,14 @@
 	</div>
 	<div class="font-nunito container mb-12 space-y-2">
 		<h1 class="font-jetbrains text-xl font-semibold">
-			<span class="mr-2 text-purple-600">&gt;</span>Education
-		</h1>
-		<EducationList />
-	</div>
-	<div class="font-nunito container mb-12 space-y-2">
-		<h1 class="font-jetbrains text-xl font-semibold">
 			<span class="mr-2 text-purple-600">&gt;</span>WorkExperience
 		</h1>
 		<WorkExperienceList />
+	</div>
+	<div class="font-nunito container mb-12 space-y-2">
+		<h1 class="font-jetbrains text-xl font-semibold">
+			<span class="mr-2 text-purple-600">&gt;</span>Education
+		</h1>
+		<EducationList />
 	</div>
 </section>

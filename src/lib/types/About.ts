@@ -11,6 +11,6 @@ export type About = {
 	name: string;
 	description: string;
 	role: string;
-	downloadCV: string;
+	whatsapp: string;
 	socials: Social[];
 };
